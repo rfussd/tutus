@@ -133,7 +133,7 @@ class TutusWindow(QWidget):
         tbar.setContentsMargins(12, 0, 12, 0)
         tbar.setSpacing(4)
 
-        def _title_btn(text: str, color: str, hover_color: str, click_target: Callable[[], None], tooltip: str) -> QPushButton:
+        def _title_btn(text: str, color: str, _hover_color: str, click_target: Callable[[], None], tooltip: str) -> QPushButton:
             btn = QPushButton(text)
             btn.setFixedSize(26, 26)
             btn.setStyleSheet(f"""
@@ -752,11 +752,12 @@ class TutusWindow(QWidget):
     def mousePressEvent(self, event: QMouseEvent | None) -> None:
         if event is None or event.button() != Qt.MouseButton.LeftButton:
             return
-            self.drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
+        self.drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
 
     def mouseMoveEvent(self, event: QMouseEvent | None) -> None:
         if event is None or event.buttons() != Qt.MouseButton.LeftButton:
             return
+        if not self.drag_pos.isNull():
             self.move(event.globalPosition().toPoint() - self.drag_pos)
 
     # ── Context Menu (right-click to close) ──────────────────────────────

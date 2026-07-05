@@ -40,7 +40,7 @@ class Color:
     TRAY_BG: QColor = QColor(2, 8, 20, 240)
 
     @classmethod
-    def rgba(cls, color: QColor, alpha: int | None = None) -> str:
+    def rgba(cls, color: QColor, alpha: int | None = None) -> str:  # noqa: N804
         if alpha is not None:
             return f"rgba({color.red()},{color.green()},{color.blue()},{alpha})"
         return f"rgba({color.red()},{color.green()},{color.blue()},{color.alpha()})"

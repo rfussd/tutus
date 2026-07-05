@@ -1,12 +1,12 @@
 # TUTUS — Asistente Personal con IA
 
-[![CI](https://github.com/dan/tutus/actions/workflows/test.yml/badge.svg)](https://github.com/dan/tutus/actions/workflows/test.yml)
+[![CI](https://github.com/rfussd/tutus/actions/workflows/test.yml/badge.svg)](https://github.com/rfussd/tutus/actions/workflows/test.yml)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/)
 [![Ruff](https://img.shields.io/badge/code%20style-ruff-000000)](https://github.com/astral-sh/ruff)
 [![Mypy](https://img.shields.io/badge/mypy-strict-2a6db0)](https://mypy-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-178%2B%20passing-brightgreen)]()
-[![Coverage](https://img.shields.io/badge/coverage-85%25-yellowgreen)]()
+[![Tests](https://img.shields.io/badge/tests-287%20passing-brightgreen)]()
+[![Coverage](https://img.shields.io/badge/coverage-42%25-yellowgreen)]()
 
 TUTUS es un asistente personal con IA que vive en tu PC. Conversa, controla tu computadora, busca en internet, ejecuta código, reproduce música y aprende de ti — todo local con LM Studio.
 
@@ -60,14 +60,14 @@ TUTUS es un asistente personal con IA que vive en tu PC. Conversa, controla tu c
 | Memoria    | SQLite FTS5 + Knowledge Graph       |
 | RAG        | ChromaDB + Sentence Transformers    |
 | Sandbox    | AST analysis, 17 módulos bloqueados |
-| Tests      | pytest + monkeypatch                |
-| CI/CD      | GitHub Actions (ruff + pytest)      |
+| Tests      | pytest + 287 tests                  |
+| CI/CD      | GitHub Actions (ruff + mypy + pytest + pip-audit + bandit) |
 
 ## Quickstart
 
 ```bash
 # 1. Clonar
-git clone https://github.com/dan/tutus.git
+git clone https://github.com/rfussd/tutus.git
 cd tutus
 
 # 2. Instalar (producción)
@@ -108,9 +108,11 @@ pytest tests/test_ui.py -v         # solo UI (requiere PyQt6)
 | Tipo               | Archivos                          | Cantidad |
 |--------------------|-----------------------------------|----------|
 | Unitarios          | `test_*.py` (core)                | ~80      |
-| E2E / Integración  | `test_e2e.py`, `test_integration.py` | ~60   |
-| UI (offscreen)     | `test_ui.py`                      | ~15      |
+| E2E / Integración  | `test_e2e.py`, `test_integration.py` | ~60      |
+| UI (offscreen)     | `test_ui.py`                      | ~20      |
+| Skills             | `test_skills.py`                  | ~57      |
 | Agentes            | `test_*_agent.py`                 | ~30      |
+| **Total**          |                                   | **287**  |
 
 ## Agentes
 

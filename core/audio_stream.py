@@ -74,7 +74,7 @@ class VoiceStream:
         self._buffered_audio = []
         self._is_speaking = False
 
-    def _audio_callback(self, indata: np.ndarray, frames: int, time_info: object, status: sd.CallbackFlags) -> None:
+    def _audio_callback(self, indata: np.ndarray, _frames: int, _time_info: object, status: sd.CallbackFlags) -> None:
         if not self._running:
             return
 

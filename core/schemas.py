@@ -39,7 +39,7 @@ class Classification(BaseModel):
 
     @field_validator("query", mode="before")
     @classmethod
-    def empty_str_to_none(cls, v: Any) -> Any:
+    def empty_str_to_none(cls, v: Any) -> Any:  # noqa: N804
         if v == "" or v == "null":
             return None
         return v

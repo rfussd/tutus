@@ -71,7 +71,7 @@ source = ["core", "agents", "skills", "ui", "web"]
 omit = ["*/tests/*", "data/*"]
 
 [tool.coverage.report]
-fail_under = 40
+fail_under = 55
 exclude_lines = [
     "pragma: no cover",
     "def __repr__",
