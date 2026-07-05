@@ -1,0 +1,317 @@
+/* ── Window ─────────────────────────────────────────── */
+#TutusWindow {
+    background: rgba(2, 8, 20, 215);
+    border: 1px solid rgba(0, 200, 255, 80);
+    border-radius: 14px;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+#HeaderLogo {
+    color: rgba(0, 220, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Consolas', monospace;
+    letter-spacing: 4px;
+    background: transparent;
+}
+
+.HeaderButton {
+    background: rgba(0, 180, 255, 30);
+    color: rgba(0, 220, 255, 180);
+    border: 1px solid rgba(0, 200, 255, 60);
+    border-radius: 4px;
+    font-size: 14px;
+}
+.HeaderButton:hover {
+    background: rgba(0, 180, 255, 70);
+}
+
+#SettingsButton {
+    background: transparent;
+    color: rgba(0, 180, 255, 120);
+    border: none;
+    font-size: 15px;
+}
+#SettingsButton:hover {
+    color: rgba(0, 220, 255, 200);
+}
+
+#CloseButton {
+    background: rgba(255, 60, 60, 30);
+    color: rgba(255, 100, 100, 180);
+    border: 1px solid rgba(255, 60, 60, 60);
+    border-radius: 4px;
+    font-size: 14px;
+}
+#CloseButton:hover {
+    background: rgba(255, 60, 60, 90);
+}
+
+/* ── Separator ─────────────────────────────────────── */
+#Separator {
+    background: rgba(0, 200, 255, 35);
+    margin: 0 14px;
+}
+
+/* ── Chat Input ────────────────────────────────────── */
+#MessageInput {
+    background: rgba(0, 150, 255, 12);
+    color: rgba(200, 240, 255, 230);
+    border: 1px solid rgba(0, 200, 255, 50);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    selection-background-color: rgba(0, 200, 255, 80);
+}
+#MessageInput:focus {
+    border: 1px solid rgba(0, 200, 255, 120);
+    background: rgba(0, 150, 255, 18);
+}
+
+/* ── Mic / Send / Continuous Buttons ───────────────── */
+.MicButton {
+    background: rgba(0, 180, 255, 25);
+    border: 1px solid rgba(0, 200, 255, 60);
+    border-radius: 8px;
+    font-size: 16px;
+}
+.MicButton:hover {
+    background: rgba(0, 180, 255, 50);
+}
+
+.MicButtonRecording {
+    background: rgba(255, 50, 50, 70);
+    border: 2px solid rgba(255, 80, 80, 180);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.ContinuousOff {
+    background: rgba(80, 80, 80, 30);
+    color: rgba(150, 150, 150, 180);
+    border: 1px solid rgba(100, 100, 100, 60);
+    border-radius: 8px;
+    font-size: 16px;
+}
+.ContinuousOff:hover {
+    background: rgba(0, 200, 100, 50);
+}
+
+.ContinuousOn {
+    background: rgba(0, 255, 100, 50);
+    color: rgba(0, 255, 120, 210);
+    border: 2px solid rgba(0, 255, 120, 160);
+    border-radius: 8px;
+    font-size: 16px;
+}
+.ContinuousOn:hover {
+    background: rgba(0, 255, 100, 80);
+}
+
+.SendButton {
+    background: rgba(0, 180, 255, 40);
+    color: rgba(0, 220, 255, 210);
+    border: 1px solid rgba(0, 200, 255, 80);
+    border-radius: 8px;
+    font-size: 13px;
+}
+.SendButton:hover {
+    background: rgba(0, 180, 255, 80);
+}
+
+/* ── Chat Area ─────────────────────────────────────── */
+QScrollArea#ChatArea {
+    background: transparent;
+    border: none;
+}
+QScrollArea#ChatArea > QWidget > QWidget {
+    background: transparent;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 4px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(0, 200, 255, 60);
+    border-radius: 2px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgba(0, 200, 255, 120);
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* ── Footer ────────────────────────────────────────── */
+#Footer {
+    color: rgba(0, 180, 255, 40);
+    font-size: 8px;
+    font-family: 'Consolas', monospace;
+    letter-spacing: 1px;
+    padding: 3px;
+}
+
+/* ── Tray Menu ─────────────────────────────────────── */
+QMenu#TrayMenu {
+    background-color: rgba(2, 8, 20, 240);
+    color: rgba(0, 220, 255, 210);
+    border: 1px solid rgba(0, 200, 255, 60);
+    font-family: 'Consolas', monospace;
+    font-size: 11px;
+    padding: 4px;
+}
+QMenu#TrayMenu::item {
+    padding: 6px 20px;
+}
+QMenu#TrayMenu::item:selected {
+    background: rgba(0, 180, 255, 50);
+}
+QMenu#TrayMenu::separator {
+    background: rgba(0, 200, 255, 30);
+    height: 1px;
+    margin: 4px 10px;
+}
+
+/* ── Indicators ────────────────────────────────────── */
+#TypingLabel {
+    color: rgba(0, 200, 255, 160);
+    font-size: 11px;
+    font-family: 'Consolas', monospace;
+    background: transparent;
+    padding: 2px 14px;
+}
+
+#ToastLabel {
+    color: rgba(0, 255, 150, 180);
+    font-size: 10px;
+    font-family: 'Consolas', monospace;
+    background: transparent;
+    padding: 2px 14px;
+}
+
+/* ── Settings ──────────────────────────────────────── */
+SettingsPanel {
+    background: rgba(2, 10, 25, 255);
+    border: 1px solid rgba(0, 200, 255, 80);
+    border-radius: 12px 0 0 12px;
+}
+
+#SettingsTitle {
+    color: rgba(0, 220, 255, 200);
+    font-size: 12px;
+    font-family: 'Consolas', monospace;
+    letter-spacing: 3px;
+    background: transparent;
+}
+
+.SettingsSection {
+    color: rgba(0, 180, 255, 140);
+    font-size: 10px;
+    font-family: Consolas, monospace;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+.SettingsValue {
+    color: rgba(0, 220, 255, 200);
+    font-size: 11px;
+    font-family: Consolas, monospace;
+    background: transparent;
+}
+
+.SettingsClose {
+    background: rgba(0, 180, 255, 25);
+    color: rgba(0, 200, 255, 160);
+    border: 1px solid rgba(0, 200, 255, 50);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 11px;
+    font-family: Consolas, monospace;
+    letter-spacing: 2px;
+}
+.SettingsClose:hover {
+    background: rgba(0, 180, 255, 50);
+}
+
+/* ── Settings: Slider ──────────────────────────────── */
+QSlider::groove:horizontal {
+    background: rgba(0, 150, 255, 30);
+    height: 3px;
+    border-radius: 2px;
+}
+QSlider::handle:horizontal {
+    background: rgba(0, 220, 255, 200);
+    width: 14px;
+    height: 14px;
+    margin: -6px 0;
+    border-radius: 7px;
+}
+QSlider::handle:horizontal:hover {
+    background: rgba(0, 255, 200, 230);
+    width: 16px;
+    height: 16px;
+    margin: -7px 0;
+    border-radius: 8px;
+}
+QSlider::sub-page:horizontal {
+    background: rgba(0, 200, 255, 80);
+    border-radius: 2px;
+}
+
+/* ── Settings: Checkbox ────────────────────────────── */
+QCheckBox {
+    color: rgba(0, 180, 255, 140);
+    font-size: 10px;
+    font-family: Consolas, monospace;
+    letter-spacing: 2px;
+    spacing: 8px;
+}
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(0, 200, 255, 60);
+    border-radius: 3px;
+    background: rgba(0, 150, 255, 15);
+}
+QCheckBox::indicator:checked {
+    background: rgba(0, 220, 255, 120);
+    border: 1px solid rgba(0, 220, 255, 180);
+}
+QCheckBox::indicator:hover {
+    border: 1px solid rgba(0, 200, 255, 120);
+}
+
+/* ── Settings: ComboBox ────────────────────────────── */
+QComboBox {
+    background: rgba(0, 150, 255, 20);
+    color: rgba(200, 235, 255, 210);
+    border: 1px solid rgba(0, 200, 255, 50);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-family: 'Segoe UI', sans-serif;
+}
+QComboBox:hover {
+    border: 1px solid rgba(0, 200, 255, 100);
+}
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QComboBox::down-arrow {
+    image: none;
+    color: rgba(0, 200, 255, 150);
+}
+QComboBox QAbstractItemView {
+    background: rgba(2, 10, 25, 240);
+    color: rgba(200, 235, 255, 210);
+    border: 1px solid rgba(0, 200, 255, 50);
+    selection-background-color: rgba(0, 150, 255, 60);
+    font-size: 12px;
+}
